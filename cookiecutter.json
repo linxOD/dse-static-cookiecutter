@@ -1,0 +1,7 @@
+{
+    "directory_name": "dse-static",
+    "project_title": "Digital Scholarly Editions Static Site Cookiecutter",
+    "project_short_title": "DSE Static-Site",
+    "github_url": "whatever.com",
+    "html_head": "DSE-Static"
+}
