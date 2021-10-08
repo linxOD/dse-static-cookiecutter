@@ -6,14 +6,14 @@
     exclude-result-prefixes="xsl tei xs" version="2.0">
     <xsl:template match="/" name="nav_bar">
         <xsl:param name="site_title">
-            Auden Musulin Papers
+            {{cookiecutter.project_short_title}}
         </xsl:param>
         <div class="wrapper-fluid wrapper-navbar sticky-navbar" id="wrapper-navbar" >
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container" >
                     <!-- Your site title as branding in the menu -->
-                    <a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="img-fluid" title="Auden Musulin Papers Logo" alt="Auden Musulin Papers Logo" itemprop="logo" /></a><!-- end custom logo -->
+                    <a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="img-fluid" title="{{cookiecutter.project_short_title}}" alt="{{cookiecutter.project_short_title}}" itemprop="logo" /></a><!-- end custom logo -->
                     <a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="{$site_title}" itemprop="url"><xsl:value-of select="$site_title"/></a>
                     <span style="margin-left:-1.7em;" class="badge bg-light text-dark">in development</span>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,7 +92,7 @@
                                 </ul>                                
                             </li>                            
                         </ul>                        
-                        <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="https://auden-musulin-papers.github.io/amp-data/search.html" role="search">
+                        <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="search.html" role="search">
                             <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
                             <button type="submit" class="navbar-search-icon">
                                 <i data-feather="search"></i>

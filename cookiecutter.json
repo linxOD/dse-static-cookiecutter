@@ -3,5 +3,8 @@
     "project_title": "Digital Scholarly Editions Static Site Cookiecutter",
     "project_short_title": "DSE Static-Site",
     "github_url": "whatever.com",
-    "html_head": "DSE-Static"
+    "html_head": "DSE-Static",
+    "color_main": "#88dbdf",
+    "color_hover": "#fff",
+    "title_xpath": ".//tei:title[@level='a'][1]/text()"
 }

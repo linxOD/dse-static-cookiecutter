@@ -13,7 +13,7 @@ div.dataTables_filter {
 }
 
 .navbar {
-    border-bottom: 5px solid #615a60 !important;
+    border-bottom: 5px solid {{cookiecutter.color_main}} !important;
 }
 
 .dataTables_info {
@@ -46,7 +46,7 @@ div.dataTables_filter {
 }
 
 .index-card {
-    border-top: 5px solid #615a60; 
+    border-top: 5px solid {{cookiecutter.color_main}}; 
     transition: transform .2s;
 }
 
@@ -63,7 +63,7 @@ div.dataTables_filter {
 }
 
 .btn-round:hover {
-    background-color: #b59890 !important;
+    background-color: {{cookiecutter.color_hover}} !important;
 }
 
 .btn-round a {
