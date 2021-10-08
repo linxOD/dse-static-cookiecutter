@@ -1,6 +1,6 @@
 # DSE-Static-Cookiecutter
 
-[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template a Static-Site Digital Scholarly Edition
+[Cookiecutter](https://github.com/cookiecutter/cookiecutter) template for a Static-Site Digital Scholarly Edition
 
 ## Quickstart
 * Install the latest Cookiecutter if you haven't installed it yet (this requires Cookiecutter 1.4.0 or higher) by running `pip install -U cookiecutter`
