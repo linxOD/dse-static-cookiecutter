@@ -21,74 +21,25 @@
                         <!-- Your menu goes here -->
                         <ul id="main-menu" class="navbar-nav">
                             <li class="nav-item dropdown">
-                                <a title="Papers" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Papers <span class="caret"></span></a>
+                                <a title="Papers" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Projekt <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Auden-Musulin Correspondence" href="toc.html" class="nav-link">Auden-Musulin Correspondence</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Musulin typescripts" href="#" class="nav-link">Musulin typescripts</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Photos" href="#" class="nav-link">Photos</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="CVL visualizations" href="#" class="nav-link">CVL visualizations</a>
+                                        <a title="Auden-Musulin Correspondence" href="about.html" class="nav-link">Über das Projekt</a>
                                     </li>
                                 </ul>                                
                             </li>
                             <li class="nav-item dropdown">
-                                <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Indexes <span class="caret"></span></a>
+                                <a title="Indexes" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Register <span class="caret"></span></a>
                                 <ul class=" dropdown-menu" role="menu">
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Persons" href="#" class="nav-link">Persons</a>
+                                        <a title="Personen" href="#" class="nav-link">Personen</a>
                                     </li>
                                     <li class="nav-item dropdown-submenu">
-                                        <a title="Institutions" href="#" class="nav-link">Institutions</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Works" href="#" class="nav-link">Works</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Places" href="#" class="nav-link">Places</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Events" href="#" class="nav-link">Events</a>
+                                        <a title="Orte" href="#" class="nav-link">Orte</a>
                                     </li>
                                 </ul>                                
                             </li>                            
-                            <li class="nav-item"><a title="Relations" href="#" class="nav-link">Relations</a></li>
-                            <!--<li class="nav-item dropdown">
-                                <a title="Biographies" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Biographies <span class="caret"></span></a>
-                                <ul class=" dropdown-menu" role="menu">
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Level 1" href="#" class="nav-link">In Progress</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Level 1" href="#" class="nav-link">In Progress</a>
-                                    </li>
-                                </ul>                                
-                            </li>-->
-                            <li class="nav-item dropdown">
-                                <a title="Project" href="#" data-toggle="dropdown" class="nav-link dropdown-toggle">Project <span class="caret"></span></a>
-                                <ul class=" dropdown-menu" role="menu">
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Description" href="#" class="nav-link">Description</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Team" href="#" class="nav-link">Team</a>
-                                    </li>
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Editorial Declaration" href="#" class="nav-link">Editorial Declaration</a>
-                                    </li>
-                                    <!--<li class="nav-item dropdown-submenu">
-                                        <a title="Instruction for using the edition" href="#" class="nav-link">Instruction for using the edition</a>
-                                    </li>-->
-                                    <li class="nav-item dropdown-submenu">
-                                        <a title="Technical Documentation" href="#" class="nav-link">Technical Documentation</a>
-                                    </li>
-                                </ul>                                
-                            </li>                            
+                            <li class="nav-item"><a title="Editionseinheiten" href="toc.html" class="nav-link">Editionseinheiten</a></li>
                         </ul>                        
                         <form class="form-inline my-2 my-lg-0 navbar-search-form" method="get" action="search.html" role="search">
                             <input class="form-control navbar-search" id="s" name="q" type="text" placeholder="Search" value="" autocomplete="off" />
