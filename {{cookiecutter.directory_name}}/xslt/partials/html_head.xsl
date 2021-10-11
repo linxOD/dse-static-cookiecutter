@@ -5,8 +5,9 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     exclude-result-prefixes="xsl xs"
     version="2.0">
+    <xsl:include href="./params.xsl"/>
     <xsl:template match="/" name="html_head">
-        <xsl:param name="html_title">{{cookiecutter.html_head}}</xsl:param>
+        <xsl:param name="html_title" select="$project_short_title"></xsl:param>
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
             <meta http-equiv="X-UA-Compatible" content="IE=edge" />

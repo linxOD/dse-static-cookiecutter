@@ -5,14 +5,14 @@
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     version="2.0" exclude-result-prefixes="tei xsl xs">
     <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes" omit-xml-declaration="yes"/>
-    
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
-    <xsl:import href="partials/html_footer.xsl"/>
+    <xsl:import href="./partials/html_footer.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
-            <xsl:value-of select="{{cookiecutter.title_xpath}}"/>
+            <xsl:value-of select="{{ cookiecutter.title_xpath }}"/>
         </xsl:variable>
+
         <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <xsl:call-template name="html_head">
@@ -80,7 +80,7 @@
                                 <a href="toc.html" class="index-link">                                   
                                     <div class="card index-card">
                                         <div class="card-body">
-                                            <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="d-block w-100" alt="..."/>
+                                            <img src="images/project_logo.png" class="d-block w-100" alt="..."/>
                                         </div>
                                         <div class="card-header">                                            
                                             <p>
@@ -94,7 +94,7 @@
                                 <a href="toc.html" class="index-link">                                                     
                                     <div class="card index-card">
                                         <div class="card-body">
-                                            <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="d-block w-100" alt="..."/>
+                                            <img src="images/project_logo.png" class="d-block w-100" alt="..."/>
                                         </div>
                                         <div class="card-header">                                            
                                             <p>
@@ -108,7 +108,7 @@
                                 <a href="toc.html" class="index-link">  
                                     <div class="card index-card">
                                         <div class="card-body">
-                                            <img src="images/Auden_Musulin_Papers_Logo_rechteckig_web.png" class="d-block w-100" alt="..."/>
+                                            <img src="images/project_logo.png" class="d-block w-100" alt="..."/>
                                         </div>
                                         <div class="card-header">                                            
                                             <p>
