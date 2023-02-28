@@ -2,12 +2,33 @@
     box-sizing: border-box;
 }
 
+span {
+    display: inline;
+}
+
+cite {
+    font-style: normal;
+}
+
+.wrapper {
+    padding: 30px 0;
+}
+
 body {
     border-style: solid;
     border-top-width: 0;
     min-height: 100vh;
     display: flex;
     overflow-x: hidden;
+}
+
+p {
+    display: block;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
 }
 
 .site>* {
@@ -49,6 +70,86 @@ body {
 
 .nounderline {
     text-decoration: none;
+}
+
+.entity {
+    cursor: pointer;
+}
+
+.modal-body table tbody tr th, .modal-body table tbody tr td {
+    border: none;
+}
+
+#wrapper-footer-full {
+    margin-top: auto;
+    display: flex;
+}
+
+sup {
+    margin-left: -4px;
+}
+
+.card {
+    margin: 2em auto;
+}
+
+a.anchor, .anchor-pb {
+    position: relative;
+    top: -120px;
+    visibility: hidden;
+}
+
+a.anchorFoot {
+    position: relative;
+    top: -110px;
+    visibility: hidden;
+}
+
+.footnote_link {
+    display: inline-block;
+    width: 2em;
+    text-align: right;
+    margin: 0 .7em 0 -2.7em;
+}
+
+.footnotes li {
+    list-style: none;
+    padding: .3em 0;
+}
+
+.footnotes {
+    padding: 1em;
+}
+
+#editor-widget {
+    position: fixed;
+    max-width: 200px;
+    right: 10%;
+}
+
+.navBarNavDropdown {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    max-width: 33%;
+     padding: .5em 0;
+}
+
+.navBarNavDropdown a {
+    position: relative;
+    display: block;
+    z-index: 0;
+}
+
+.navBarNavDropdown {
+    position: relative;
+    display: block;
+    z-index: 999;
+}
+
+.navBarNavDropdown ul li {
+    margin: .5em auto;
+    z-index: 999;
 }
 
 /* Datatables, provided by https://github.com/babslgam*/
@@ -178,6 +279,9 @@ proposed mobile resolution handling
 ####################################
 */
 @media (max-width: 1920px) {
+    #editor-widget {
+        right: 5%;
+    }
 /* 
 #########################################
 add rules for HD screen resolution
@@ -186,6 +290,9 @@ add rules for HD screen resolution
 }
 
 @media (max-width: 1200px) {
+    #editor-widget {
+        right: 1%;
+    }
 /* 
 #########################################
 add rules for screen medium to low
@@ -195,6 +302,11 @@ resolution
 }
 
 @media (max-width: 1024px) {
+    .navbar .navbar-collapse {
+        border-top: 1px solid rgba(0,0,0,.075);
+        padding-top: 2rem;
+        margin-top: .5rem;
+    }
 /* 
 #########################################
 add rules for smallest tablet high
@@ -204,6 +316,16 @@ resolution or low resolution screens
 }
 
 @media (max-width: 768px) {
+    .facsimiles {
+        display: none;
+    }
+    #aot-navbarNavDropdown .dropdown-menu li:nth-child(-n + 1) {
+        display: none !important;
+    }
+    .text {
+        padding-left: 0;
+    }
+    
 /* 
 #########################################
 add rules for smallest smartphones 
@@ -213,6 +335,16 @@ high resolution or tablet regular resolution
 }
 
 @media (max-width: 575px) {
+    br {
+        display: none;
+    }
+    li a br {
+        display: block !important;
+    }
+    .dropdown-menu li a {
+        max-width: 500px;
+        overflow: hidden;
+    }
 /* 
 #########################################
 add rules for smallest smartphones 
@@ -222,6 +354,10 @@ regular resolution
 }
 
 @media (max-width: 480px) {
+    .dropdown-menu li a {
+        max-width: 400px;
+        overflow: hidden;
+    }
 /* 
 #########################################
 add rules for smallest smartphones 

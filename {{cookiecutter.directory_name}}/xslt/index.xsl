@@ -25,9 +25,9 @@
                     <xsl:call-template name="nav_bar"/>
                 
                     <div class="wrapper" id="wrapper-hero">
-                        <!--<div class="wrapper" id="wrapper-hero-content" >
-                            <div class="container hero-dark" id="wrapper-hero-inner" tabindex="-1">-->
-                                <div id="audenIndexCarousel" class="carousel slide" data-ride="carousel">
+                        <div class="wrapper" id="wrapper-hero-content" >
+                            <div class="container hero-dark" id="wrapper-hero-inner" tabindex="-1">
+                                <div id="sampleIndexCarousel" class="carousel slide" data-ride="carousel">
                                     <ol class="carousel-indicators">
                                         <li data-target="#audenIndexCarousel" data-slide-to="0" class="active"></li>
                                         <li data-target="#audenIndexCarousel" data-slide-to="1"></li>
@@ -37,12 +37,10 @@
                                         <div class="carousel-item active">
                                             <img src="dist/fundament/images/acdh_building.jpg" class="d-block w-100" alt="..."/>
                                             <div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
-                                                <h1>Auden Musulin Papers</h1>
-                                                <h2>A digital edition of W. H. Auden's Letters to Stella Musulin</h2>
-                                                <p>Early version of a once to become Project-Website and Digital Edition of the <strong>Auden Musulin Papers</strong></p>
-                                                <button class="btn btn-round">
-                                                    <a href="toc.html">Read More</a>
-                                                </button>
+                                                <h1>Example Content Slide 1</h1>
+                                                <h2>Example Subtitle Slide 1</h2>
+                                                <h5>Second slide label</h5>
+                                                <p>Some representative placeholder content for the second slide.</p>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
@@ -65,8 +63,8 @@
                                         </div>
                                     </div>
                                 </div>
-                            <!--</div>
-                        </div>-->                        
+                            </div>
+                        </div>                       
                     </div>
                     <div class="container" style="margin-top:1em;">
                         <div class="row">

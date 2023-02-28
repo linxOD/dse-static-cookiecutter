@@ -6,7 +6,7 @@ var editor = new LoadEditor({
           opt: "ef",
           opt_slider: "entities-features-slider",
           title: "All",
-          color: "grey",
+          color: "red",
           html_class: "undefined",
           css_class: "undefined",
           chg_citation: "citation-url",
@@ -21,7 +21,7 @@ var editor = new LoadEditor({
         },
         {
           opt: "prs",
-          color: "pink",
+          color: "blue",
           title: "Persons",
           html_class: "persons",
           css_class: "pers",
@@ -37,7 +37,7 @@ var editor = new LoadEditor({
         },
         {
           opt: "plc",
-          color: "gold",
+          color: "green",
           title: "Places",
           html_class: "places",
           css_class: "plc",
@@ -53,7 +53,7 @@ var editor = new LoadEditor({
         },
         {
           opt: "org",
-          color: "gold",
+          color: "yellow",
           title: "Organizations",
           html_class: "orgs",
           css_class: "org",
@@ -69,7 +69,7 @@ var editor = new LoadEditor({
         },
         {
           opt: "wrk",
-          color: "turquoise",
+          color: "lila",
           title: "Works",
           html_class: "works",
           css_class: "wrk",

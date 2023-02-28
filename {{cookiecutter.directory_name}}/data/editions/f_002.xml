@@ -15,32 +15,34 @@
     </teiHeader>
     <text>
         <body>
-            <pb n="1" facs="url/image-1"/>
-            <p>
-                  Some text here.<lb/>
-                  I'm a marked entity node <rs ref="#person_id_1" type="person">my name is Hal</rs>.<lb/>
-                  I'm a marked entity node <rs ref="#place_id_1" type="place">from space</rs>.<lb/>
-                  I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>.<lb/>
-                  I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
-            </p>
-            <pb n="2" facs="url/image-1"/>
-            <p>
-                  Some text here.<lb/>
-                  I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
-                  I'm a marked entity node <hi rendition="#em">from space</rs>.<lb/>
-                  I'm a marked entity node <hi rendition="#italic">Space Station Org</rs>.<lb/>
-                  I'm a marked entity node <hi rendition="#smallcaps">The book of Hal</rs>.
-            </p>
-            <lg>
-               <l>I'm a verse line in a linegroup.</l>
-               <l>I'm a verse line in a linegroup.</l>
-               <l>I'm a verse line in a linegroup.</l>
-               <l>I'm a verse line in a linegroup.</l>
-               <l>I'm a verse line in a linegroup.</l>
-            </lg>
-            <p>
-               Some text here with a note.<note n="1" type="footnote" place="foot">I'm note text.</note>
-            </p>
+            <div xml:id="transcription">
+               <pb n="1" facs="url/image-1"/>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <rs ref="#person_id_1" type="person">my name is Hal</rs>.<lb/>
+                     I'm a marked entity node <rs ref="#place_id_1" type="place">from space</rs>.<lb/>
+                     I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>.<lb/>
+                     I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
+               </p>
+               <pb n="2" facs="url/image-1"/>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#em">from space</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#italic">Space Station Org</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#smallcaps">The book of Hal</hi>.
+               </p>
+               <lg>
+                  <l>I'm a verse line in a linegroup.</l>
+                  <l>I'm a verse line in a linegroup.</l>
+                  <l>I'm a verse line in a linegroup.</l>
+                  <l>I'm a verse line in a linegroup.</l>
+                  <l>I'm a verse line in a linegroup.</l>
+               </lg>
+               <p>
+                  Some text here with a note.<note n="1" type="footnote" place="foot" xml:id="note_1">I'm note text.</note>
+               </p>
+            </div>
         </body>
         <back>
             <listPerson>
@@ -57,12 +59,12 @@
                   <idno type="WIKIDATA">some wikidata id</idno>
                </place>
             </listPlace>
-            <listorg>
+            <listOrg>
                <org xml:id="org_id_1">
                   <orgName>Spaceship</orgName>
                   <idno type="WIKIDATA">some wikidata id</idno>
                </org>
-            </listorg>
+            </listOrg>
             <listBibl>
                <bibl xml:id="bibl_id_1">
                   <title>Book of Hal 2000</title>

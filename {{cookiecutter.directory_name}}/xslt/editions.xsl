@@ -11,6 +11,7 @@
     <xsl:import href="partials/html_footer.xsl"/>
     <xsl:import href="partials/osd-container.xsl"/>
     <xsl:import href="partials/tei-facsimile.xsl"/>
+    <xsl:import href="partials/aot-options.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type='main'][1]/text()"/>
@@ -34,23 +35,22 @@
                                     <xsl:call-template name="annotation-options"></xsl:call-template>
                                 </div>
                             </div>
-                            <div class="card-body">                                
-                                <xsl:for-each select="//tei:div[@xml:id='transcription']">
-                                    <xsl:for-each-group select="*" group-starting-with="tei:pb">
-                                        <window-resize opt="resizing" pos="{position()}" size="0.50"></window-resize>
-                                        <div id="container-resize-{position()}" class="transcript row">
-                                            <div class="col-md-6 text">
-                                                <hr/>                                                
-                                                <div class="card-body yes-index">                                                                                       
-                                                    <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                                        <p><xsl:apply-templates/></p>
-                                                    </xsl:for-each>
-                                                </div>
+                            <xsl:for-each select="//tei:body/tei:div[@xml:id='transcription']">
+                                <xsl:for-each-group select="*" group-starting-with="tei:pb">
+                                    <window-resize opt="resizing" pos="{position()}" size="0.50"></window-resize>
+                                    <div id="container-resize-{position()}" class="transcript row active">
+                                        <div class="col-md-6 text">
+                                            <div class="card-body yes-index">                                                                                       
+                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                                    <p><xsl:apply-templates/></p>
+                                                </xsl:for-each>
+                                            </div>
+                                            <xsl:if test="current-group()//tei:note[@type='footnote']">
                                                 <div class="card-footer yes-index">
                                                     <a class="anchor" id="footnotes"></a>
                                                     <h5>Footnotes</h5>
                                                     <ul class="footnotes">
-                                                        <xsl:for-each select=".//tei:body//tei:note[@place='foot']">
+                                                        <xsl:for-each select="//tei:body//tei:note[@place='foot']">
                                                             <li>
                                                                 <a class="anchorFoot" id="{@xml:id}"></a>
                                                                 <span class="footnote_link">
@@ -59,50 +59,51 @@
                                                                     </a>
                                                                 </span>
                                                                 <span class="footnote_text">
-                                                                    <xsl:apply-templates select="node() except tei:pb"/>
+                                                                    <xsl:apply-templates/>
                                                                 </span>
                                                             </li>
                                                         </xsl:for-each>
                                                     </ul>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-6 facsimiles">
-                                                <hr/>                                                
-                                                <div class="card-body">
-                                                    <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
-                                                    <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
-                                                    <div id="{$osd_container_id}" style="padding:.5em;">
-                                                        <!-- image container accessed by OSD script -->
-                                                        <script type="text/javascript" src="js/osd_single.js"></script>
-                                                        <div id="{$osd_container_id2}">
-                                                            <xsl:if test="@facs">    
-                                                                <xsl:variable name="iiif-ext" select="'.jp2/full/max/0/default.jpg'"/> 
-                                                                <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
-                                                                <img id="{$facs_id}" onload="load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}')">
-                                                                    <xsl:attribute name="src">
-                                                                        <xsl:value-of select="concat(@facs , $iiif-ext)"/>
-                                                                    </xsl:attribute>
-                                                                </img>                                                                
-                                                            </xsl:if>                                
-                                                        </div>                                
-                                                    </div>
+                                            </xsl:if>
+                                        </div>
+                                        <div class="col-md-6 facsimiles">                                                
+                                            <div class="card-body">
+                                                <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
+                                                <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
+                                                <div id="{$osd_container_id}" style="padding:.5em;">
+                                                    <!-- image container accessed by OSD script -->
+                                                    <script type="text/javascript" src="js/osd_single.js"></script>
+                                                    <div id="{$osd_container_id2}">
+                                                        <xsl:if test="@facs">    
+                                                            <xsl:variable name="iiif-ext" select="'.jp2/full/max/0/default.jpg'"/> 
+                                                            <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
+                                                            <img id="{$facs_id}" onload="load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}')">
+                                                                <xsl:attribute name="src">
+                                                                    <xsl:value-of select="concat(@facs , $iiif-ext)"/>
+                                                                </xsl:attribute>
+                                                            </img>                                                                
+                                                        </xsl:if>                                
+                                                    </div>                                
                                                 </div>
                                             </div>
                                         </div>
-                                    </xsl:for-each-group>
-                                    
-                                </xsl:for-each>
-                                 <!-- create list* elements for entities bs-modal -->
-                                <xsl:for-each select="//tei:back">
-                                    <div class="tei-back">
-                                        <xsl:apply-templates/>
                                     </div>
-                                </xsl:for-each>
-                            </div>
+                                </xsl:for-each-group>
+                                
+                            </xsl:for-each>
+                                <!-- create list* elements for entities bs-modal -->
+                            <xsl:for-each select="//tei:back">
+                                <div class="tei-back">
+                                    <xsl:apply-templates/>
+                                </div>
+                            </xsl:for-each>
                         </div>                       
                     </div>
                     <xsl:call-template name="html_footer"/>
                 </div>
+                <script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script>
+                <script type="text/javascript" src="js/run.js"></script>
             </body>
         </html>
     </xsl:template>
