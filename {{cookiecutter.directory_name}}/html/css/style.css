@@ -184,14 +184,22 @@ div.dataTables_filter {
   width:100%;
 }
 
+#wrapper-hero-content {
+    padding: 2em 4em;
+}
+
+.footer-separator {
+    border-top: 1px solid #f1f1f1;
+    padding: 2em 0;
+}
+
 /**** Font Aweseome ***/
 .far {
     font-family: "Font Awesome 5 Free" !important;
 }
 
 .img-fluid {
-    max-width: 160% !important;
-    max-height: 160% !important;
+    max-width: 70px !important;
 }
 
 .card {
