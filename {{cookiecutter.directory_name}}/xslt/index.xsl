@@ -35,7 +35,7 @@
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img src="dist/fundament/images/acdh_building.jpg" class="d-block w-100" alt="..."/>
+                                            <img src="images/acdh_building.jpg" class="d-block w-100" alt="..."/>
                                             <div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
                                                 <h1>Example Content Slide 1</h1>
                                                 <h2>Example Subtitle Slide 1</h2>
@@ -44,7 +44,7 @@
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="dist/fundament/images/acdh_building.jpg" class="d-block w-100" alt="..."/>
+                                            <img src="images/acdh_building.jpg" class="d-block w-100" alt="..."/>
                                             <div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
                                                 <h1>Example Content Slide 2</h1>
                                                 <h2>Example Subtitle Slide 2</h2>
@@ -53,7 +53,7 @@
                                             </div>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="dist/fundament/images/acdh_building.jpg" class="d-block w-100" alt="..."/>
+                                            <img src="images/acdh_building.jpg" class="d-block w-100" alt="..."/>
                                             <div class="carousel-caption d-none d-md-block" style="background-image: linear-gradient(rgba(38.0, 35.3, 37.6, 0.5), rgba(38.0, 35.3, 37.6, 0.5));">
                                                 <h1>Example Content Slide 3</h1>
                                                 <h2>Example Subtitle Slide 3</h2>

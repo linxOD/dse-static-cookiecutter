@@ -6,5 +6,5 @@
     <xsl:param name="project_short_title">{{ cookiecutter.project_short_title }}</xsl:param>
     <xsl:param name="github_url">{{ cookiecutter.github_url }}</xsl:param>
     <xsl:param name="html_title">{{ cookiecutter.project_short_title }}</xsl:param>
-    <xsl:param name="project_logo">dist/fundament/images/fundament_logo.svg</xsl:param>
+    <xsl:param name="project_logo">images/fundament_logo.svg</xsl:param>
 </xsl:stylesheet>
