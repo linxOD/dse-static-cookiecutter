@@ -1,3 +1,56 @@
+*, :after, :before {
+    box-sizing: border-box;
+}
+
+body {
+    border-style: solid;
+    border-top-width: 0;
+    min-height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.site>* {
+    width: 100%;
+}
+
+.site {
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid {
+    max-width: 1200px;
+}
+
+.italic {
+    font-style: italic;
+}
+  
+.bold {
+    font-weight: bold;
+}
+
+.smallcaps {
+    text-transform: uppercase;
+    letter-spacing: .5em;
+}
+
+.nounderline {
+    text-decoration: none;
+}
+
 /* Datatables, provided by https://github.com/babslgam*/
 
 div.dataTables_filter {
@@ -117,4 +170,62 @@ button#ssDoSearch {
 
 #github-logo:hover {
     transform: scale(1.05);
+}
+
+/*
+####################################
+proposed mobile resolution handling
+####################################
+*/
+@media (max-width: 1920px) {
+/* 
+#########################################
+add rules for HD screen resolution
+#########################################
+*/
+}
+
+@media (max-width: 1200px) {
+/* 
+#########################################
+add rules for screen medium to low
+resolution
+#########################################
+*/
+}
+
+@media (max-width: 1024px) {
+/* 
+#########################################
+add rules for smallest tablet high
+resolution or low resolution screens
+#########################################
+*/
+}
+
+@media (max-width: 768px) {
+/* 
+#########################################
+add rules for smallest smartphones 
+high resolution or tablet regular resolution
+#########################################
+*/
+}
+
+@media (max-width: 575px) {
+/* 
+#########################################
+add rules for smallest smartphones 
+regular resolution
+#########################################
+*/
+}
+
+@media (max-width: 480px) {
+/* 
+#########################################
+add rules for smallest smartphones 
+low resolution
+#########################################
+*/
 }

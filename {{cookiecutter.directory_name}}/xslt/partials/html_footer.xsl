@@ -3,11 +3,11 @@
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xsl xs"
+    exclude-result-prefixes="#all"
     version="2.0">
     <xsl:template match="/" name="html_footer">
         
-        <div class="wrapper fundament-default-footer" id="wrapper-footer-full" style="margin-top: 4em;">
+        <div class="wrapper fundament-default-footer hide-reading" id="wrapper-footer-full" style="margin-top: 4em;">
             <div class="container" id="footer-full-content" tabindex="-1">
                 <div class="footer-separator">
                     CONTACT
@@ -29,14 +29,14 @@
                                 Austrian Academy of Sciences
                             </p>
                             <p>
-                                Sonnenfelsgasse 19
+                                Bäckerstraße 13
                                 <br/>
                                 1010 Vienna
                             </p>
                             <p>
                                 T: +43 1 51581-2200
                                 <br/>
-                                E: <a href="mailto:acdh@oeaw.ac.at">acdh@oeaw.ac.at</a>
+                                E: <a href="mailto:acdh-ch-helpdesk@oeaw.ac.at">acdh-ch-helpdesk(at)oeaw.ac.at</a>
                             </p>
                         </div>
                     </div>
@@ -44,14 +44,6 @@
                         <h6 class="font-weight-bold">PROJECT PARTNERS</h6>
                         <div class="container">
                             <div class="row">
-                                <!--<div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="card flex-md-row mb-4 align-items-center">
-                                        <a href="https://acdh.oeaw.ac.at"><img class="card-img-right flex-auto d-md-block" src="https://fundament.acdh.oeaw.ac.at/common-assets/images/acdh_logo.svg" alt="ACDH Logo" style="max-width: 60px; height: auto;" title="ACDH Logo" /></a>
-                                        <!-\-<div class="card-body d-flex flex-column align-items-start">
-                                            <p class="card-text mb-auto">Austrian Center for Digital Humanities and Cultural Heritage</p>
-                                        </div>-\->
-                                    </div>
-                                </div>-->  
                                 <div class="col-lg-6 col-md-6 col-sm-12">
                                     <div class="flex-md-row mb-4 align-items-center">
                                         <a href="https://www.fwf.ac.at/en/"><img class="card-img-right flex-auto d-md-block" src="https://www.fwf.ac.at/fileadmin/files/Images/News_Presse/Presse/Logo/fwf-logo_var2.jpg" alt="FWF Der Wissenschaftsfond Logo" style="max-width: 140px; height: auto; margin-top:1em;" title="FWF Der Wissenschaftsfond" /></a>
@@ -69,24 +61,6 @@
                                     </div>
                                 </div>                                
                             </div>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flex-md-row mb-4 align-items-center">
-                                        <a href="https://www.donau-uni.ac.at/en.html"><img class="card-img-right flex-auto d-md-block" src="https://upload.wikimedia.org/wikipedia/de/2/2f/Donau_Universit%C3%A4t_Krems.svg" alt="Donau Universität Krems Logo" style="max-width: 120px; height: auto; vertical-align: middle;" title="Donau Universität Krems " /></a>
-                                        <!--<div class="card-body d-flex flex-column align-items-start">
-                                            <p class="card-text mb-auto">Project partner</p>
-                                        </div>-->
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12">
-                                    <div class="flex-md-row mb-4 align-items-center">
-                                        <a href="https://cvl.tuwien.ac.at/"><img class="card-img-right flex-auto d-md-block" src="https://www.oeaw.ac.at/fileadmin/Institute/ACDH/img/logo/cvl_logo.png" alt="Computer Vision Lab Logo" style="max-width: 140px; height: auto; padding: .5em;" title="Computer Vision Lab"/></a>
-                                        <!--<div class="card-body d-flex flex-column align-items-start">
-                                            <p class="card-text mb-auto">Project partner</p>
-                                        </div>-->
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     <!-- .footer-widget -->                       
@@ -96,7 +70,7 @@
                                 <h6 class="font-weight-bold">HELPDESK</h6>
                                 <p>ACDH-CH runs a helpdesk offering advice for questions related to various digital humanities topics.</p>
                                 <p>
-                                    <a class="helpdesk-button" href="mailto:acdh-helpdesk@oeaw.ac.at">ASK US!</a>
+                                    <a class="helpdesk-button" href="mailto:acdh-ch-helpdesk@oeaw.ac.at">ASK US!</a>
                                 </p>
                             </div>
                         </div>
@@ -121,11 +95,16 @@
         </div>
         <!-- #wrapper-footer-full -->
         <div class="footer-imprint-bar" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
-            © Copyright OEAW | <a href="https://www.oeaw.ac.at/die-oeaw/impressum/">Impressum/Imprint</a>
+            © Copyright OEAW | <a href="https://www.oeaw.ac.at/oeaw/impressum">Impressum/Imprint</a>
         </div>
-        <script type="text/javascript" src="dist/fundament/vendor/jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="dist/fundament/js/fundament.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/openseadragon.min.js"></script>
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script>
         <script type="text/javascript" src="js/dt.js"></script>
+        <script type="text/javascript">
+            $('#aot-navBarNavDropdown .dropdown-menu .nav-item').click(function(e) {
+                e.stopPropagation();
+            });
+        </script>
     </xsl:template>
 </xsl:stylesheet>
