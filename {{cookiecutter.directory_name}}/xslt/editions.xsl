@@ -45,27 +45,6 @@
                                                     <p><xsl:apply-templates/></p>
                                                 </xsl:for-each>
                                             </div>
-                                            <xsl:if test="current-group()//tei:note[@type='footnote']">
-                                                <div class="card-footer yes-index">
-                                                    <a class="anchor" id="footnotes"></a>
-                                                    <h5>Footnotes</h5>
-                                                    <ul class="footnotes">
-                                                        <xsl:for-each select="//tei:body//tei:note[@place='foot']">
-                                                            <li>
-                                                                <a class="anchorFoot" id="{@xml:id}"></a>
-                                                                <span class="footnote_link">
-                                                                    <a href="#{@xml:id}_inline" class="nounderline">
-                                                                        <xsl:value-of select="@n"/>
-                                                                    </a>
-                                                                </span>
-                                                                <span class="footnote_text">
-                                                                    <xsl:apply-templates/>
-                                                                </span>
-                                                            </li>
-                                                        </xsl:for-each>
-                                                    </ul>
-                                                </div>
-                                            </xsl:if>
                                         </div>
                                         <div id="img-resize-{position()}" class="col-md-6 facsimiles">                                                
                                             <div class="card-body">
@@ -92,6 +71,27 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <xsl:if test="current-group()//tei:note[@type='footnote']">
+                                        <div class="card-footer yes-index">
+                                            <a class="anchor" id="footnotes"></a>
+                                            <h5>Footnotes</h5>
+                                            <ul class="footnotes">
+                                                <xsl:for-each select="//tei:body//tei:note[@place='foot']">
+                                                    <li>
+                                                        <a class="anchorFoot" id="{@xml:id}"></a>
+                                                        <span class="footnote_link">
+                                                            <a href="#{@xml:id}_inline" class="nounderline">
+                                                                <xsl:value-of select="@n"/>
+                                                            </a>
+                                                        </span>
+                                                        <span class="footnote_text">
+                                                            <xsl:apply-templates/>
+                                                        </span>
+                                                    </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                    </xsl:if>
                                 </xsl:for-each-group>
                                 
                             </xsl:for-each>
