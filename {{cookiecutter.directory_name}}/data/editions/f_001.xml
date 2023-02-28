@@ -14,15 +14,15 @@
         </fileDesc>
     </teiHeader>
     <surface>
-      <graphic url="images/example-image-1.jpg"></graphic>
+      <graphic url="images/example-img-1.jpg"></graphic>
     </surface>
     <surface>
-      <graphic url="images/example-image-2.jpg"></graphic>
+      <graphic url="images/example-img-2.jpg"></graphic>
     </surface>
     <text>
         <body>
             <div xml:id="transcription">
-               <pb n="1" facs="images/example-image-1.jpg"/>
+               <pb n="1" facs="images/example-img-1.jpg"/>
                <p>
                      Some text here.<lb/>
                      I'm a marked entity node <rs ref="#person_id_1" type="person">my name is Hal</rs>.<lb/>
@@ -30,7 +30,7 @@
                      I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>.<lb/>
                      I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
                </p>
-               <pb n="2" facs="images/example-image-2.jpg"/>
+               <pb n="2" facs="images/example-img-2.jpg"/>
                <p>
                      Some text here.<lb/>
                      I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
