@@ -179,7 +179,7 @@ var editor = new LoadEditor({
             class_parent: "transcript",
             resize: "resize-hide",
           },
-          image_size: "1000px",
+          image_size: "400px",
         },
       ],
       active_class: "active",
