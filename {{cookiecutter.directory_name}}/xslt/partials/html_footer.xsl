@@ -8,7 +8,7 @@
     <xsl:template match="/" name="html_footer">
         
         <div class="wrapper fundament-default-footer hide-reading" id="wrapper-footer-full">
-            <div class="container" id="footer-full-content" tabindex="-1">
+            <div class="container-fluid" id="footer-full-content" tabindex="-1">
                 <div class="footer-separator">
                     CONTACT
                 </div>
@@ -94,7 +94,7 @@
             </div>
         </div>
         <!-- #wrapper-footer-full -->
-        <div class="footer-imprint-bar bg-dark text-light" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;" >
+        <div class="footer-imprint-bar" id="wrapper-footer-secondary" style="text-align:center; padding:0.4rem 0; font-size: 0.9rem;background-color:#00122f;" >
             © Copyright OEAW | <a href="https://www.oeaw.ac.at/oeaw/impressum">Impressum/Imprint</a>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

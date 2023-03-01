@@ -10,8 +10,28 @@ cite {
     font-style: normal;
 }
 
-.wrapper {
-    padding: 30px 0;
+#wrapper-hero-content {
+    padding: 0;
+}
+
+.intro {
+    background-color: #fff;
+}
+
+.intro .col-md-6 {
+    padding: 0;
+}
+
+.wp-intro_left {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.intro_left {
+    display: block;
+    margin: 2em auto;
+    padding: 0 15%;
 }
 
 body {
@@ -44,9 +64,7 @@ a {
 }
 
 .container {
-    width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -167,7 +185,7 @@ div.dataTables_filter {
 }
 
 .navbar {
-    border-bottom: 5px solid {{cookiecutter.color_main}} !important;
+    border-bottom: 3px solid {{cookiecutter.color_main}} !important;
 }
 
 .dataTables_info {
@@ -182,10 +200,6 @@ div.dataTables_filter {
 
 .dataTables_wrapper table {
   width:100%;
-}
-
-#wrapper-hero-content {
-    padding: 2em 4em;
 }
 
 .footer-separator {
@@ -205,6 +219,10 @@ div.dataTables_filter {
 .card {
     margin-top: 1em;
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
+}
+
+.intro {
+    background-color: #f1f1f1;
 }
 
 .index-card {
@@ -238,10 +256,6 @@ p {
 
 .carousel-indicators {
     cursor: pointer;
-}
-
-.container-fluid {
-    max-width: 1024px;
 }
 
 span.ssQueryAndButton {
