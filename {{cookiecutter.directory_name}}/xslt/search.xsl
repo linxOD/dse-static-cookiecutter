@@ -25,9 +25,9 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">                        
-                        <div class="card">
+                        <div class="wrapper">
                             <div id="staticSearch"></div>
-                        </div>                    
+                        </div>                  
                     </div>
                     <xsl:call-template name="html_footer"/>
                 </div>

@@ -90,6 +90,11 @@ a {
     text-decoration: none;
 }
 
+#viewer {
+    position: fixed;
+    padding: 2em;
+}
+
 .entity {
     cursor: pointer;
 }
@@ -180,6 +185,10 @@ a.anchorFoot {
 .navBarNavDropdown ul li {
     margin: .5em auto;
     z-index: 999;
+}
+
+#staticSearch {
+    padding: 2em;
 }
 
 /* Datatables, provided by https://github.com/babslgam*/

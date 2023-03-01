@@ -41,7 +41,7 @@
                                 <div class="intro_right">
                                     <div class="wrapper" id="wrapper-hero-content" >
                                         <div class="hero-dark" id="wrapper-hero-inner" tabindex="-1">
-                                            <div id="sampleIndexCarousel" class="carousel slide carousel-fade">
+                                            <div id="sampleIndexCarousel" class="carousel slide">
                                                 <div class="carousel-indicators">
                                                     <button type="button" data-bs-target="#sampleIndexCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                                                     <button type="button" data-bs-target="#sampleIndexCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
