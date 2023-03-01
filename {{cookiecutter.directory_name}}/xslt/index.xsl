@@ -32,7 +32,7 @@
                                     <h5>A template to create static website.</h5>
                                     <a href="toc.html" title="Edition">
                                         <button class="btn btn-secondary" role="button" style="width: 200px;">
-                                            Edtion
+                                            Explore
                                         </button>
                                     </a>
                                 </div>
