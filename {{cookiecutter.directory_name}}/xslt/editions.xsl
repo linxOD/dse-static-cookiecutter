@@ -28,7 +28,7 @@
                     <xsl:call-template name="nav_bar"/>
                     
                     <div class="container-fluid">                        
-                        <div class="card">
+                        <div class="wp-transcript">
                             <div class="card-header">
                                 <h1><xsl:value-of select="$doc_title"/></h1>
                                 <div id="editor-widget">
@@ -36,67 +36,54 @@
                                     <xsl:call-template name="annotation-options"></xsl:call-template>
                                 </div>
                             </div>
-                            <xsl:for-each select="//tei:body/tei:div[@xml:id='transcription']">
-                                <xsl:for-each-group select="*" group-starting-with="tei:pb">
-                                    <!-- <window-resize opt="resizing" pos="{position()}" size="0.50"></window-resize> -->
-                                    <div id="container-resize-{position()}" class="transcript row active">
-                                        <div id="img-resize-{position()}" class="col-md-6 facsimiles">                                                
-                                            <div class="card-body">
-                                                <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
-                                                <xsl:variable name="osd_container_id2" select="concat(@type, '_container2_', generate-id())"/>
-                                                <div id="viewer-{position()}">
-                                                    <div id="{$osd_container_id}" style="padding:.5em;">
-                                                        <!-- image container accessed by OSD script -->
-                                                        <script type="text/javascript" src="js/osd_single.js"></script>
-                                                        <div id="{$osd_container_id2}">
-                                                            <xsl:if test="@facs">    
-                                                                <xsl:variable name="iiif-ext" select="'.jp2/full/max/0/default.jpg'"/> 
-                                                                <xsl:variable name="iiif-ext-sample"/> 
-                                                                <xsl:variable name="facs_id" select="concat(@type, '_img_', generate-id())"/>
-                                                                <img id="{$facs_id}" onload="load_image('{$facs_id}','{$osd_container_id}','{$osd_container_id2}')">
-                                                                    <xsl:attribute name="src">
-                                                                        <xsl:value-of select="concat(@facs , $iiif-ext-sample)"/>
-                                                                    </xsl:attribute>
-                                                                </img>                                                                
-                                                            </xsl:if>                                
-                                                        </div>                                
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="text-resize-{position()}" class="col-md-6 text">
-                                            <div class="card-body yes-index">                                                                                       
-                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                                    <p><xsl:apply-templates/></p>
-                                                </xsl:for-each>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div id="img-resize-{position()}" class="col-md-6 facsimiles">
+                                        <div id="viewer-{position()}">
+                                            <div id="container_facs_1">
+                                                <!-- container and facs handling in js -->
                                             </div>
                                         </div>
                                     </div>
-                                    <xsl:if test="current-group()//tei:note[@type='footnote']">
-                                        <div class="card-footer yes-index">
-                                            <a class="anchor" id="footnotes"></a>
-                                            <h5>Footnotes</h5>
-                                            <ul class="footnotes">
-                                                <xsl:for-each select="//tei:body//tei:note[@place='foot']">
-                                                    <li>
-                                                        <a class="anchorFoot" id="{@xml:id}"></a>
-                                                        <span class="footnote_link">
-                                                            <a href="#{@xml:id}_inline" class="nounderline">
-                                                                <xsl:value-of select="@n"/>
-                                                            </a>
-                                                        </span>
-                                                        <span class="footnote_text">
-                                                            <xsl:apply-templates/>
-                                                        </span>
-                                                    </li>
-                                                </xsl:for-each>
-                                            </ul>
+                                </div>
+                                <div id="container-resize-{position()}" class="col-md-6 transcript active">
+                                    <div id="text-resize-{position()}" class="text yes-index">
+                                        <div id="section-1">
+                                            <xsl:for-each select="//tei:body/tei:div[@xml:id='transcription']">
+                                                <div class="card-body">
+                                                    <xsl:for-each-group select="*" group-starting-with="tei:pb">
+                                                        <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                                            <p><xsl:apply-templates/></p>
+                                                        </xsl:for-each>
+                                                    </xsl:for-each-group>
+                                                </div>
+                                                <xsl:if test="//tei:note[@type='footnote']">
+                                                    <div class="card-footer">
+                                                        <a class="anchor" id="footnotes"></a>
+                                                        <h5>Footnotes</h5>
+                                                        <ul class="footnotes">
+                                                            <xsl:for-each select="//tei:note[@place='foot']">
+                                                                <li>
+                                                                    <a class="anchorFoot" id="{@xml:id}"></a>
+                                                                    <span class="footnote_link">
+                                                                        <a href="#{@xml:id}_inline" class="nounderline">
+                                                                            <xsl:value-of select="@n"/>
+                                                                        </a>
+                                                                    </span>
+                                                                    <span class="footnote_text">
+                                                                        <xsl:apply-templates/>
+                                                                    </span>
+                                                                </li>
+                                                            </xsl:for-each>
+                                                        </ul>
+                                                    </div>
+                                                </xsl:if>
+                                            </xsl:for-each>
                                         </div>
-                                    </xsl:if>
-                                </xsl:for-each-group>
-                                
-                            </xsl:for-each>
-                                <!-- create list* elements for entities bs-modal -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- create list* elements for entities bs-modal -->
                             <xsl:for-each select="//tei:back">
                                 <div class="tei-back">
                                     <xsl:apply-templates/>
@@ -108,6 +95,7 @@
                 </div>
                 <script src="https://unpkg.com/de-micro-editor@0.2.6/dist/de-editor.min.js"></script>
                 <script type="text/javascript" src="js/run.js"></script>
+                <script type="text/javascript" src="js/osd.js"></script>
             </body>
         </html>
     </xsl:template>
