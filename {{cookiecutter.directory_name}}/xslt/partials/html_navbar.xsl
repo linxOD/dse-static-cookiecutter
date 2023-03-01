@@ -6,7 +6,7 @@
     exclude-result-prefixes="#all" version="2.0">
     <xsl:include href="./params.xsl"/>
     <xsl:template match="/" name="nav_bar">
-        <div class="wrapper-fluid wrapper-navbar sticky-top" id="wrapper-navbar">
+        <div class="wrapper-fluid wrapper-navbar sticky-top hide-reading" id="wrapper-navbar">
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">

@@ -36,17 +36,15 @@
                                     <xsl:call-template name="annotation-options"></xsl:call-template>
                                 </div>
                             </div>
-                            <div id="container-resize" class="row">
-                                <div class="col-md-6">
-                                    <div id="img-resize" class="facsimiles">
-                                        <div id="viewer">
-                                            <div id="container_facs_1">
-                                                <!-- container and facs handling in js -->
-                                            </div>
+                            <div id="container-resize" class="row transcript active">
+                                <div id="img-resize" class="col-md-6 facsimiles">
+                                    <div id="viewer">
+                                        <div id="container_facs_1">
+                                            <!-- container and facs handling in js -->
                                         </div>
                                     </div>
                                 </div>
-                                <div id="text-resize" class="col-md-6 text transcript active yes-index">
+                                <div id="text-resize" class="col-md-6 text yes-index">
                                     <div id="section">
                                         <xsl:for-each select="//tei:body/tei:div[@xml:id='transcription']">
                                             <div class="card-body">
