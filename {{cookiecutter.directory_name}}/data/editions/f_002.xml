@@ -30,7 +30,49 @@
                      I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>. 
                      I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
                </p>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <rs ref="#person_id_1" type="person">my name is Hal</rs>. 
+                     I'm a marked entity node <rs ref="#place_id_1" type="place">from space</rs>. 
+                     I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>. 
+                     I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
+               </p>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <rs ref="#person_id_1" type="person">my name is Hal</rs>. 
+                     I'm a marked entity node <rs ref="#place_id_1" type="place">from space</rs>. 
+                     I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>. 
+                     I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
+               </p>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <rs ref="#person_id_1" type="person">my name is Hal</rs>. 
+                     I'm a marked entity node <rs ref="#place_id_1" type="place">from space</rs>. 
+                     I'm a marked entity node <rs ref="#org_id_1" type="org">Space Station Org</rs>. 
+                     I'm a marked entity node <rs ref="#bibl_id_1" type="bibl">The book of Hal</rs>.
+               </p>
                <pb n="2" facs="images/example-img-2.jpg"/>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#em">from space</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#italic">Space Station Org</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#smallcaps">The book of Hal</hi>.
+               </p>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#em">from space</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#italic">Space Station Org</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#smallcaps">The book of Hal</hi>.
+               </p>
+               <p>
+                     Some text here.<lb/>
+                     I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#em">from space</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#italic">Space Station Org</hi>.<lb/>
+                     I'm a marked entity node <hi rendition="#smallcaps">The book of Hal</hi>.
+               </p>
                <p>
                      Some text here.<lb/>
                      I'm a marked entity node <hi rendition="#bold">my name is Hal</hi>.<lb/>
@@ -80,3 +122,4 @@
         </back>
     </text>
   </TEI>
+  
