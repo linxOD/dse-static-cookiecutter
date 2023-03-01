@@ -47,11 +47,11 @@
                                     </div>
                                 </div>
                                 <div id="text-resize" class="col-md-6 text transcript active yes-index">
-                                    <div id="section-1">
+                                    <div id="section">
                                         <xsl:for-each select="//tei:body/tei:div[@xml:id='transcription']">
                                             <div class="card-body">
                                                 <xsl:for-each-group select="*" group-starting-with="tei:pb">
-                                                    <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                                    <xsl:for-each select="current-group()[self::tei:p|self::tei:lg|self::tei:pb]">
                                                         <xsl:if test="name() = 'pb'">
                                                             <span class="anchor-pb"></span>
                                                             <span class="pb" source="{tokenize(@facs, '/')[last()]}">[<xsl:value-of select="@n"/>]</span>

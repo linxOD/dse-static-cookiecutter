@@ -7,7 +7,8 @@ get container wrapper of osd viewer
 */
 // var container = document.getElementById("container_facs_2");
 // container.style.display = "none";
-var height = screen.height;
+var section = document.getElementById("section");
+var height = section.clientHeight;
 var container = document.getElementById("container_facs_1");
 var wrapper = document.getElementsByClassName("facsimiles")[0];
 
@@ -20,22 +21,22 @@ height is always the screen height minus some offset
 ##################################################################
 */
 if (!wrapper.classList.contains("fade")) {
-    container.style.height = `${String(height - 200)}px`;
+    container.style.height = `${String(height - 100)}px`;
     // set osd wrapper container width
-    var container = document.getElementById("section-1");
+    var container = document.getElementById("section");
     if (container !== null) {
         var width = container.clientWidth;
     }
-    var container = document.getElementById("viewer-1");
+    var container = document.getElementById("viewer");
     container.style.width = `${String(width - 25)}px`;
 } else {
-    container.style.height = `${String(height - 200)}px`;
+    container.style.height = `${String(height - 100)}px`;
     // set osd wrapper container width
-    var container = document.getElementById("section-1");
+    var container = document.getElementById("section");
     if (container !== null) {
         var width = container.clientWidth;
     }
-    var container = document.getElementById("viewer-1");
+    var container = document.getElementById("viewer");
     container.style.width = `${String(width / 2)}px`;
 }
 
