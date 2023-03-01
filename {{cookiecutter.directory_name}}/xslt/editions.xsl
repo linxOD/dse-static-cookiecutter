@@ -32,6 +32,7 @@
                             <div class="card-header">
                                 <h1><xsl:value-of select="$doc_title"/></h1>
                                 <div id="editor-widget">
+                                    <p>Text Editor</p>
                                     <xsl:call-template name="annotation-options"></xsl:call-template>
                                 </div>
                             </div>
@@ -39,13 +40,6 @@
                                 <xsl:for-each-group select="*" group-starting-with="tei:pb">
                                     <!-- <window-resize opt="resizing" pos="{position()}" size="0.50"></window-resize> -->
                                     <div id="container-resize-{position()}" class="transcript row active">
-                                        <div id="text-resize-{position()}" class="col-md-6 text">
-                                            <div class="card-body yes-index">                                                                                       
-                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
-                                                    <p><xsl:apply-templates/></p>
-                                                </xsl:for-each>
-                                            </div>
-                                        </div>
                                         <div id="img-resize-{position()}" class="col-md-6 facsimiles">                                                
                                             <div class="card-body">
                                                 <xsl:variable name="osd_container_id" select="concat(@type, '_container_', generate-id())"/>
@@ -68,6 +62,13 @@
                                                         </div>                                
                                                     </div>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div id="text-resize-{position()}" class="col-md-6 text">
+                                            <div class="card-body yes-index">                                                                                       
+                                                <xsl:for-each select="current-group()[self::tei:p|self::tei:lg]">
+                                                    <p><xsl:apply-templates/></p>
+                                                </xsl:for-each>
                                             </div>
                                         </div>
                                     </div>

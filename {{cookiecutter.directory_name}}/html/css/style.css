@@ -101,7 +101,7 @@ a {
 #wrapper-footer-full {
     margin-top: auto;
     display: flex;
-    background-color:#00122f;
+    background-color:#fff;
 }
 
 sup {
@@ -142,16 +142,18 @@ a.anchorFoot {
 
 #editor-widget {
     position: fixed;
-    max-width: 200px;
-    right: 10%;
+    max-width: 100px;
+    right: 20%;
+    padding: .5em;
+    background-color: #88dbdf;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, .1);
 }
 
 .navBarNavDropdown {
     position: relative;
     z-index: 999;
     display: flex;
-    max-width: 33%;
-     padding: .5em 0;
 }
 
 .navBarNavDropdown a {
@@ -187,6 +189,7 @@ div.dataTables_filter {
 
 .navbar {
     border-bottom: 3px solid {{cookiecutter.color_main}} !important;
+    background-color: #fff;
 }
 
 .dataTables_info {

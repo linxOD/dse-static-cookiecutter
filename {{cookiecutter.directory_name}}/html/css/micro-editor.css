@@ -75,9 +75,7 @@ input:checked + .i-slider:before {
   color: #444;
   display: block;
   width: 50px;
-  position: absolute;
-  top: 1.5em;
-  right: 2em;
+  margin-left:3em;
 }
 
 .strikethrough {
@@ -191,7 +189,7 @@ input:checked + .i-slider:before {
 }
 
 .nav-link.btn.active {
-  background-color: #b59890 !important;
+  background-color: #88dbdf !important;
 }
 
 .nav-link.btn {
