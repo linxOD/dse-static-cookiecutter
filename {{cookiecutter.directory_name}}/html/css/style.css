@@ -140,10 +140,17 @@ a.anchorFoot {
     padding: 1em;
 }
 
+.wp-transcript {
+    margin: 2em auto;
+}
+
+.wp-transcript .card-header {
+    padding: 2em 0;
+}
+
 #editor-widget {
     position: fixed;
     max-width: 100px;
-    right: 20%;
     padding: .5em;
     background-color: #88dbdf;
     border-radius: 1rem;
@@ -154,6 +161,7 @@ a.anchorFoot {
     position: relative;
     z-index: 999;
     display: flex;
+    text-align: center;
 }
 
 .navBarNavDropdown a {
@@ -318,6 +326,7 @@ add rules for HD screen resolution
 @media (max-width: 1200px) {
     #editor-widget {
         right: 1%;
+        top: 12%;
     }
 /* 
 #########################################
