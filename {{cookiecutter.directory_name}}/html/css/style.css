@@ -101,6 +101,7 @@ a {
 #wrapper-footer-full {
     margin-top: auto;
     display: flex;
+    background-color:#00122f;
 }
 
 sup {
@@ -222,7 +223,7 @@ div.dataTables_filter {
 }
 
 .intro {
-    background-color: #f1f1f1;
+    background-color: #fff;
 }
 
 .index-card {
